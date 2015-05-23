@@ -3,7 +3,7 @@
 # Author: Hackerlq<hackerlq@gmail.com>
 # Modified on  2015/5/23
 
-__author__ = "hackerlq"
+#__author__ = "hackerlq"
 
 import collections
 import hashlib
@@ -11,7 +11,7 @@ import json
 import sys
 sys.path.append("/cygdrive/d/program/python27/Lib/site-packages")
 import requests
-from Crypto.Cipher import AES
+from Crypto.cpher import AES
 
 
 class WifiDemo(object):
