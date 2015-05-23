@@ -8,7 +8,8 @@ __author__ = "hackerlq"
 import collections
 import hashlib
 import json
-
+import sys
+sys.path.append("/cygdrive/d/program/python27/Lib/site-packages")
 import requests
 from Crypto.Cipher import AES
 
@@ -90,7 +91,9 @@ def main():
     wifi = WifiDemo()
 
     # Add BSSID & SSID
-    wifi.add_ssid("5c:63:bf:90:ed:ce", "TP-LINK_90EDCE")
+    bssid=sys.argv[1]
+    ssid=sys.argv[2]
+    wifi.add_ssid(bssid, ssid)
 
     result = wifi.request()
 
